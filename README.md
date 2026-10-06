@@ -67,7 +67,8 @@ Run `python scripts/run-local.py` from this checkout (or
 Deism to the existing `bmoremedtech` Docker network, hosting the generated site
 at `http://localhost:8878/` and the branded OrgPortal at
 `https://localhost:8444/`. The site's Community Portal link opens the local
-portal. Configure `DEISM_DOCKER_NETWORK`, `DEISM_SITE_PORT`, and
+portal. Every launch rebuilds the current source with the Dockerized Python 3.13
+and Graphviz exporter; checked-in build snapshots are not the serving source. Configure `DEISM_DOCKER_NETWORK`, `DEISM_SITE_PORT`, and
 `DEISM_PORTAL_PORT` to override the defaults.
 
 The `deism-*` services have separate persistent database volumes and local
@@ -88,3 +89,8 @@ website-to-portal navigation, Deism branding, events, email login, session
 persistence, and mobile layouts. Screenshots and the results report are saved to
 `../OrgPortal/web/.local/deism-clickthrough/`. Authentication and application
 requests are restricted to localhost.
+
+To rebuild and refresh only the website while keeping its portal and accounts
+running, use `DEISM_SITE_ONLY=1 python scripts/run-local.py`. The current UI
+includes the church landing page, searchable doctrine reader, and the Hadith
+curriculum. The browser test verifies these features and the local portal login.

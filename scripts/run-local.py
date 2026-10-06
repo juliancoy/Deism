@@ -7,6 +7,8 @@ import subprocess
 import sys
 
 root = Path(__file__).resolve().parents[1]
+# Never serve a checked-in or leftover build without regenerating current source.
+subprocess.run([sys.executable, str(root / 'scripts/build-local.py')], check=True)
 portal = root.parent / 'OrgPortal'
 state = root / '.local'
 state.mkdir(exist_ok=True)
@@ -27,7 +29,9 @@ sys.path.insert(0, str(portal))
 spec = importlib.util.spec_from_file_location('deism_orgportal_launcher', portal / 'run.py')
 launcher = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(launcher)
-if os.environ.get('DEISM_REUSE_RUNNING') == '1':
+if os.environ.get('DEISM_SITE_ONLY') == '1':
+    pass
+elif os.environ.get('DEISM_REUSE_RUNNING') == '1':
     for service, port in [('org', 8001), ('chat', 8003), ('pidp-dev', 8000)]:
         launcher._wait_for_http(f'http://{prefix}{service}:{port}/health', network, retries=120, expect_status=200)
     launcher._start_local_gateway(prefix, network, prefix + 'portal-dev', prefix + 'org', prefix + 'pidp-dev', '8001')
@@ -40,7 +44,8 @@ UPDATE portal_tenants SET hostname='portal.deism.church',
  custom_domain_status='attached', home_url='http://localhost:{site_port}/',
  feature_config=json_set(feature_config,
  '$.specialtyResources[0].href','http://localhost:{site_port}/',
- '$.specialtyResources[1].href','http://localhost:{site_port}/deismu.html')
+ '$.specialtyResources[1].label','Hadith Curriculum',
+ '$.specialtyResources[1].href','http://localhost:{site_port}/hadith/curriculum.html')
 WHERE id='deism';
 INSERT INTO events (id, ingest_key, title, slug, description, starts_at, ends_at,
  location, host_org_id, host_org_name, tags)
@@ -64,17 +69,12 @@ http {{
   listen 8080;
   root /site;
   location = /community {{ return 302 https://localhost:{portal_port}/; }}
-  location = /navbar.js {{
-   sub_filter_types application/javascript text/javascript;
-   sub_filter_once off;
-   sub_filter 'configureAuth0();' 'document.getElementById("loginButton").addEventListener("click", dlogin);';
-   sub_filter 'await auth0.loginWithRedirect();' 'window.location.href="https://localhost:{portal_port}/users/login";';
-   try_files $uri =404;
-  }}
+  location = /login {{ return 302 https://localhost:{portal_port}/users/login; }}
   location / {{
    sub_filter_once on;
-   sub_filter '</ul>' '<li><a href="https://localhost:{portal_port}/">Community Portal</a></li></ul>';
-   try_files $uri $uri/ =404;
+   sub_filter '</nav>' '<a href="https://localhost:{portal_port}/">Community Portal</a><a href="https://localhost:{portal_port}/users/login">Login</a></nav>';
+   sub_filter '</ul>' '<li><a href="https://localhost:{portal_port}/">Community Portal</a></li><li><a href="https://localhost:{portal_port}/users/login">Login</a></li></ul>';
+   try_files $uri $uri.html $uri/ =404;
   }}
  }}
 }}
