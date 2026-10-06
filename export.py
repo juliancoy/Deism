@@ -962,9 +962,9 @@ def export_static(node, index=0, value=1000.0, build_dir=None, template="SELECTE
 
 
 def ensure_clean_build():
-    if BUILD_DIR.exists():
-        shutil.rmtree(BUILD_DIR)
-    shutil.copytree(SRC_DIR, BUILD_DIR)
+    # Preserve the bind-mounted directory inode so running servers see updates.
+    BUILD_DIR.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(SRC_DIR, BUILD_DIR, dirs_exist_ok=True)
     for generated_path in (
         BUILD_DIR / "book_of_doctrine",
         BUILD_DIR / "book_of_doctrine.html",

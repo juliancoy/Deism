@@ -90,7 +90,14 @@ persistence, and mobile layouts. Screenshots and the results report are saved to
 `../OrgPortal/web/.local/deism-clickthrough/`. Authentication and application
 requests are restricted to localhost.
 
-To rebuild and refresh only the website while keeping its portal and accounts
-running, use `DEISM_SITE_ONLY=1 python scripts/run-local.py`. The current UI
+To refresh the mounted website without rebuilding images or restarting services,
+run `python scripts/build-local.py`. This runs the existing exporter runtime and
+writes files directly into the mounted `build/` directory. Provision the runtime
+once with `docker build -t deism-local-builder -f scripts/Dockerfile.build scripts`
+if it is missing. The current UI
 includes the church landing page, searchable doctrine reader, and the Hadith
 curriculum. The browser test verifies these features and the local portal login.
+
+For focused reader validation (contents, chapter navigation, search, diagrams,
+and responsive layouts), run `node scripts/test-reader.mjs`. It uses the
+Playwright installation in the adjacent OrgPortal workspace.

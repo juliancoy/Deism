@@ -179,56 +179,64 @@ function populatePillarSelect(pillars, alltext) {
 }
 
 function buildOverviewNode(node) {
-    const selectedNodeText = document.getElementById("selected-node-text");
-
-    if (node.children && node.children.length) {
-        const details = document.createElement("details");
-        details.className = "overview-branch";
-
-        const summary = document.createElement("summary");
-        summary.textContent = node.name;
-        summary.addEventListener("click", () => {
-            if (selectedNodeText) {
-                selectedNodeText.innerHTML = node.text || "";
-            }
-        });
-
-        details.appendChild(summary);
-
-        const childrenContainer = document.createElement("div");
-        childrenContainer.className = "overview-children";
-        node.children.forEach((child) => {
-            childrenContainer.appendChild(buildOverviewNode(child));
-        });
-        details.appendChild(childrenContainer);
-
-        return details;
-    }
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "overview-leaf";
-    button.textContent = node.name;
-    button.addEventListener("click", () => {
-        if (selectedNodeText) {
-            selectedNodeText.innerHTML = node.text || "";
-        }
+    const link = document.createElement('a');
+    link.href = node.url || '/book_of_doctrine/';
+    link.textContent = node.name;
+    link.className = 'overview-leaf';
+    const cleanPath = path => path.replace(/\.html$/, '').replace(/\/$/, '');
+    const current = cleanPath(location.pathname) === cleanPath(link.pathname);
+    if (current) link.setAttribute('aria-current', 'page');
+    if (!node.children?.length) return link;
+    const details = document.createElement('details');
+    details.className = 'overview-branch';
+    details.dataset.path = node.url;
+    const summary = document.createElement('summary');
+    summary.textContent = node.name;
+    const children = document.createElement('div');
+    children.className = 'overview-children';
+    children.append(link, ...node.children.map(buildOverviewNode));
+    details.append(summary, children);
+    details.open = current || cleanPath(location.pathname).startsWith(cleanPath(link.pathname) + '/');
+    try {
+        const saved = JSON.parse(sessionStorage.getItem('deism-contents-branches') || '{}');
+        if (node.url in saved && !details.open) details.open = saved[node.url];
+    } catch {}
+    details.addEventListener('toggle', () => {
+        try {
+            const saved = JSON.parse(sessionStorage.getItem('deism-contents-branches') || '{}');
+            saved[node.url] = details.open;
+            sessionStorage.setItem('deism-contents-branches', JSON.stringify(saved));
+        } catch {}
     });
-    return button;
+    return details;
 }
 
 function populateOverviewTree(data) {
-    const overviewTree = document.getElementById("overview-tree");
-    if (!overviewTree) {
-        return;
-    }
+    const tree = document.getElementById('overview-tree');
+    if (tree) tree.replaceChildren(buildOverviewNode(data));
+}
 
-    overviewTree.innerHTML = "";
-    const root = buildOverviewNode(data);
-    if (root.tagName === "DETAILS") {
-        root.open = true;
-    }
-    overviewTree.appendChild(root);
+const contentsToggle = document.getElementById('contentsToggle');
+const contentsPanel = document.getElementById('overview-panel');
+const wideReader = matchMedia('(min-width: 1100px)');
+function setContents(open) {
+    contentsPanel.hidden = !open;
+    contentsToggle.setAttribute('aria-expanded', String(open));
+    document.querySelector('.reader-layout').classList.toggle('contents-open', open);
+}
+if (contentsToggle && contentsPanel) {
+    let saved;
+    try { saved = sessionStorage.getItem('deism-contents-open'); } catch {}
+    setContents(wideReader.matches && saved !== 'false');
+    contentsToggle.addEventListener('click', () => {
+        const open = contentsPanel.hidden;
+        setContents(open);
+        try { sessionStorage.setItem('deism-contents-open', String(open)); } catch {}
+    });
+    wideReader.addEventListener('change', () => setContents(wideReader.matches));
+    contentsPanel.addEventListener('keydown', event => {
+        if (event.key === 'Escape') { setContents(false); contentsToggle.focus(); }
+    });
 }
 
 function buildSearchIndex(node, trail = []) {
@@ -544,7 +552,6 @@ console.log("DOM Loaded");
 fetch("/julian_flare.json")
     .then((response) => response.json())
     .then((data) => {
-        populatePillarSelect(data.children, data.text);
         populateOverviewTree(data);
         initNavSearch(data);
     })
@@ -553,9 +560,7 @@ fetch("/julian_flare.json")
     });
 
 
-document.getElementById('bojButton').addEventListener('click', function () {
-    window.location.href = '/';
-});
+
 
 function getArrowTarget(selector) {
     const link = document.querySelector(selector);
@@ -567,7 +572,7 @@ function getArrowTarget(selector) {
 
 document.addEventListener('keydown', (event) => {
     const active = document.activeElement;
-    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) {
+    if (active && (['INPUT', 'TEXTAREA', 'BUTTON', 'SUMMARY', 'A'].includes(active.tagName) || active.isContentEditable)) {
         return;
     }
 
