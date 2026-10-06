@@ -68,6 +68,7 @@ http {{
  server {{
   listen 8080;
   root /site;
+  add_header Cache-Control "no-cache" always;
   location = /community {{ return 302 https://localhost:{portal_port}/; }}
   location = /login {{ return 302 https://localhost:{portal_port}/users/login; }}
   location / {{
