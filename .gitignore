@@ -117,3 +117,6 @@ dmypy.json
 .pyre/
 deismu/google-chrome-stable_current_amd64.deb
 src/julian_flare.json
+
+# Local Docker state and test credentials
+.local/

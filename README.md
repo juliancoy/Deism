@@ -59,3 +59,32 @@ Dena, inspired by the Roman Denarius, aims to provide a stable economic symbol e
 For questions, discussions, or further information, please reach out through [our community forum](https://deism.church/community) (**TODO**) or directly via the contact information provided on our website.
 
 We encourage all contributors to adhere to our [Code of Conduct](https://deism.church/codeofconduct) (**TODO**) to maintain a respectful and inclusive environment.
+
+## Local Docker hosting and portal testing
+
+Run `python scripts/run-local.py` from this checkout (or
+`python Deism/scripts/run-local.py` from the organization workspace). This adds
+Deism to the existing `bmoremedtech` Docker network, hosting the generated site
+at `http://localhost:8878/` and the branded OrgPortal at
+`https://localhost:8444/`. The site's Community Portal link opens the local
+portal. Configure `DEISM_DOCKER_NETWORK`, `DEISM_SITE_PORT`, and
+`DEISM_PORTAL_PORT` to override the defaults.
+
+The `deism-*` services have separate persistent database volumes and local
+credentials. Organization replication is explicitly disabled for this writable
+browser fixture; the MedTech replica continues to operate separately. The
+launcher applies OrgPortal migrations and sets only the isolated Deism tenant's
+local URLs. It also seeds a local community event. State lives under `.local/`.
+This launcher does not provision or change production hosting.
+
+For headless click-through validation, run:
+
+```bash
+node ../OrgPortal/web/scripts/test-local-deism.mjs
+```
+
+The test uses a fresh local PIdP account and local verification-mail logs, checks
+website-to-portal navigation, Deism branding, events, email login, session
+persistence, and mobile layouts. Screenshots and the results report are saved to
+`../OrgPortal/web/.local/deism-clickthrough/`. Authentication and application
+requests are restricted to localhost.
