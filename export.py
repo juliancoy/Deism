@@ -991,7 +991,12 @@ def write_text(path, content):
 def write_landing_page():
     landing_html = (SRC_DIR / "landing.html").read_text(encoding="utf-8")
     landing_html = landing_html.replace("ASSET_VERSION", ASSET_VERSION)
+    # The combined website/portal origin exists only in the local Docker stack.
+    if os.environ.get("DEISM_LOCAL_PORTAL") != "1":
+        landing_html = landing_html.replace('<a href="/community">Community</a>', '<a href="https://orgportal.cc/portals/deism">Community</a>')
+        landing_html = landing_html.replace('      <a href="/users/login">Login</a>\n', "")
     write_text(BUILD_DIR / "index.html", landing_html)
+    write_text(BUILD_DIR / "landing.html", landing_html)
 
 
 def copy_tree(src, dest):
