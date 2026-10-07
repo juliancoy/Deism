@@ -122,3 +122,6 @@ screenshots
 
 # Local Docker state and test credentials
 .local/
+
+# Wrangler deployment cache
+.wrangler/
