@@ -20,6 +20,7 @@ prefix = 'deism-'
 os.environ.update({
     'ORGPORTAL_LOCAL_STATE_DIR': str(state / 'orgportal'),
     'ORGPORTAL_LOCAL_GATEWAY_PORT': str(portal_port),
+    'ORGPORTAL_LOCAL_PUBLIC_BASE_URL': f'http://localhost:{site_port}',
     'ORGPORTAL_LOCAL_TENANT_HOST': 'portal.deism.church',
     'ORGPORTAL_ORGANIZATION_REPLICA_SOURCE': '',
     'ORGPORTAL_START_PROD': 'false',
@@ -40,10 +41,10 @@ else:
 fixture = state / 'tenant.sql'
 fixture.write_text(f"""
 UPDATE portal_tenants SET hostname='portal.deism.church',
- public_base_url='https://localhost:{portal_port}', canonical_path_prefix='',
+ public_base_url='http://localhost:{site_port}', canonical_path_prefix='',
  custom_domain_status='attached', home_url='http://localhost:{site_port}/',
  feature_config=json_set(feature_config,
- '$.specialtyResources[0].href','http://localhost:{site_port}/',
+ '$.specialtyResources[0].href','http://localhost:{site_port}/book_of_doctrine/',
  '$.specialtyResources[1].label','Hadith Curriculum',
  '$.specialtyResources[1].href','http://localhost:{site_port}/hadith/curriculum.html')
 WHERE id='deism';
@@ -61,25 +62,8 @@ ON CONFLICT(id) DO NOTHING;
 subprocess.run(['docker', 'cp', str(fixture), 'deism-community-api:/tmp/deism-tenant.sql'], check=True)
 subprocess.run(['docker', 'exec', 'deism-community-api', 'node_modules/.bin/wrangler', 'd1', 'execute', 'org', '--local', '--file', '/tmp/deism-tenant.sql'], check=True)
 config = state / 'site.conf'
-config.write_text(f"""events {{}}
-http {{
- include /etc/nginx/mime.types;
- default_type application/octet-stream;
- server {{
-  listen 8080;
-  root /site;
-  add_header Cache-Control "no-cache" always;
-  location = /community {{ return 302 https://localhost:{portal_port}/; }}
-  location = /login {{ return 302 https://localhost:{portal_port}/users/login; }}
-  location / {{
-   sub_filter_once on;
-   sub_filter '</nav>' '<a href="https://localhost:{portal_port}/">Community Portal</a><a href="https://localhost:{portal_port}/users/login">Login</a></nav>';
-   sub_filter '</ul>' '<li><a href="https://localhost:{portal_port}/">Community Portal</a></li><li><a href="https://localhost:{portal_port}/users/login">Login</a></li></ul>';
-   try_files $uri $uri.html $uri/ =404;
-  }}
- }}
-}}
-""")
+from local_site_config import site_config, legacy_gateway_config
+config.write_text(site_config(site_port))
 launcher._remove_container('deism-website')
 launcher.docker_utils.run_container({
     'image': 'nginx:alpine', 'name': 'deism-website', 'network': network,
@@ -89,4 +73,7 @@ launcher.docker_utils.run_container({
                 str(config): {'bind': '/etc/nginx/nginx.conf', 'mode': 'ro'}},
 })
 print(f'Deism website: http://localhost:{site_port}/')
-print(f'Deism portal: https://localhost:{portal_port}/')
+gateway_config = state / 'orgportal/nginx.conf'
+gateway_config.write_text(legacy_gateway_config(site_port))
+subprocess.run(['docker', 'exec', 'deism-nginx-gateway', 'nginx', '-s', 'reload'], check=True)
+print(f'Deism community: http://localhost:{site_port}/community')

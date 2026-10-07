@@ -66,9 +66,9 @@ Run `python scripts/run-local.py` from this checkout (or
 `python Deism/scripts/run-local.py` from the organization workspace). This adds
 Deism to the existing `bmoremedtech` Docker network, hosting the generated site
 at `http://localhost:8878/` and the branded OrgPortal at
-`https://localhost:8444/`. The site's Community Portal link opens the local
-portal. Every launch rebuilds the current source with the Dockerized Python 3.13
-and Graphviz exporter; checked-in build snapshots are not the serving source. Configure `DEISM_DOCKER_NETWORK`, `DEISM_SITE_PORT`, and
+`http://localhost:8878/community`. The site's Community link opens the local
+portal on the same origin. Every launch exports the current source with the existing
+Python 3.13 and Graphviz runtime into the mounted directory; no image rebuild is required. Configure `DEISM_DOCKER_NETWORK`, `DEISM_SITE_PORT`, and
 `DEISM_PORTAL_PORT` to override the defaults.
 
 The `deism-*` services have separate persistent database volumes and local
@@ -101,3 +101,9 @@ curriculum. The browser test verifies these features and the local portal login.
 For focused reader validation (contents, chapter navigation, search, diagrams,
 and responsive layouts), run `node scripts/test-reader.mjs`. It uses the
 Playwright installation in the adjacent OrgPortal workspace.
+
+The local landing page, doctrine, Hadith, community, APIs, and sign-in share
+`http://localhost:8878`. Community lives at `/community`; member pages keep their
+existing paths (such as `/chat`, `/calendar`, and `/users/login`). The former
+HTTPS gateway redirects to this combined site. Nginx serves the mounted static
+files and forwards portal requests to the existing shared services.
