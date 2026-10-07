@@ -33,8 +33,8 @@ if os.environ.get('DEISM_SITE_ONLY') == '1':
     pass
 elif os.environ.get('DEISM_REUSE_RUNNING') == '1':
     for service, port in [('org', 8001), ('chat', 8003), ('pidp-dev', 8000)]:
-        launcher._wait_for_http(f'http://{prefix}{service}:{port}/health', network, retries=120, expect_status=200)
-    launcher._start_local_gateway(prefix, network, prefix + 'portal-dev', prefix + 'org', prefix + 'pidp-dev', '8001')
+        launcher._wait_for_http(f'http://{launcher.service_name(prefix, service)}:{port}/health', network, retries=120, expect_status=200)
+    launcher._start_local_gateway(prefix, network, launcher.service_name(prefix, 'portal-dev'), launcher.service_name(prefix, 'org'), launcher.service_name(prefix, 'pidp-dev'), '8001')
 else:
     launcher.run(prefix, network)
 fixture = state / 'tenant.sql'
@@ -58,8 +58,8 @@ SELECT 'deism-local-gathering', 'local:deism:gathering',
 FROM portal_tenants WHERE id='deism'
 ON CONFLICT(id) DO NOTHING;
 """)
-subprocess.run(['docker', 'cp', str(fixture), 'deism-org:/tmp/deism-tenant.sql'], check=True)
-subprocess.run(['docker', 'exec', 'deism-org', 'node_modules/.bin/wrangler', 'd1', 'execute', 'org', '--local', '--file', '/tmp/deism-tenant.sql'], check=True)
+subprocess.run(['docker', 'cp', str(fixture), 'deism-community-api:/tmp/deism-tenant.sql'], check=True)
+subprocess.run(['docker', 'exec', 'deism-community-api', 'node_modules/.bin/wrangler', 'd1', 'execute', 'org', '--local', '--file', '/tmp/deism-tenant.sql'], check=True)
 config = state / 'site.conf'
 config.write_text(f"""events {{}}
 http {{
@@ -80,9 +80,9 @@ http {{
  }}
 }}
 """)
-launcher._remove_container('deism-site')
+launcher._remove_container('deism-website')
 launcher.docker_utils.run_container({
-    'image': 'nginx:alpine', 'name': 'deism-site', 'network': network,
+    'image': 'nginx:alpine', 'name': 'deism-website', 'network': network,
     'detach': True, 'restart_policy': {'Name': 'always'},
     'ports': {'8080/tcp': ('127.0.0.1', site_port)},
     'volumes': {str(root / 'build'): {'bind': '/site', 'mode': 'ro'},
