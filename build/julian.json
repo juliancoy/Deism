@@ -198,181 +198,6 @@
         }
       }
     },
-    "God": {
-      "Catechism": {
-        "Introduction": {
-          "The Deist Catechism is an accessible summary of Deist thought": {},
-          "It serves children and adults, instructing them in what is right, and insulating them from what is wrong": {},
-          "The Deist Catechism exists to edify the intellect, inspire ethical living, and cultivate a sense of awe and wonder towards the universe.": {}
-        },
-        "Catechism": {
-          "What is the chief end of humankind?<br>": {},
-          "The chief end of humankind is to find God<br>": {},
-          "Hasn't God been found already in the form of Yahweh, Jesus, and Allah?<br>": {},
-          "No, as these are false Gods": {},
-          "No one has ever heard, nor seen them<br>": {},
-          "Where is God?<br>": {},
-          "God is outside of this universe<br>": {},
-          "Can you see God?<br>": {},
-          "Not at this time<br>": {},
-          "Does God hear our prayers?<br>": {},
-          "No. God does not hear us<br>": {},
-          "Should you glorify God?<br>": {},
-          "Sure, if you would like<br>": {},
-          "Who were our first parents?<br>": {},
-          "Chromosomal Adam and Eve, from Africa<br>": {},
-          "Of what were our first parents made?<br>": {},
-          "They were the continuation of an earlier, similar species<br>": {},
-          "What is a covenant?<br>": {},
-          "An agreement between two or more persons.<br>": {},
-          "How many Gods are there?<br>": {},
-          "One. The Creator God<br>": {},
-          "Does God know all things?<br>": {},
-          "No<br>": {},
-          "Who wrote the Bible?<br>": {},
-          "Ordinary people<br>": {},
-          "Should I live my life according to the first two testaments?<br>": {},
-          "No, as they are legacy. A better life doctrine is the Third Testament, which has superseded the first two<br>": {},
-          "What is the purpose of religion?<br>": {},
-          "The purpose of religion is to empower the people socially<br>": {},
-          "Am I not then equally served by attending a traditional house of worship?<br>": {},
-          "If you appreciate traditional doctrine, this is the better path for you<br>": {},
-          "What is the Beatific Vision?<br>": {},
-          "The Beatific Vision will occur when humankind unequivocally witnesses the face of God<br>": {},
-          "How will we know this event has occurred?<br>": {},
-          "You will investigate the claims scientifically<br>": {},
-          "What is the Ascension?<br>": {},
-          "The Ascension is the period after the Beatific Vision in which we become communicant with God<br>": {}
-        }
-      },
-      "Central Topology": {
-        "God is outside of the Cosmos, in Heaven": {},
-        "The Cosmos, as God's creation, are also contained within Heaven": {},
-        "The Children of Abraham presently occupy only a small part of the Cosmos": {},
-        "Cosmological Topology": {
-          "Heaven": {
-            "God": {},
-            "The Cosmos": {
-              "Us": {}
-            }
-          }
-        }
-      },
-      "Faith": {
-        "Nobody Creed": {
-          "Nobody has spoken to God": {},
-          "Nobody may speak for God": {},
-          "Nobody knows the name of God": {},
-          "Nobody knows the character of God": {},
-          "No messenger exists for God": {},
-          "No human can claim genetic lineage from God": {},
-          "No human can claim spiritual lineage from God": {}
-        },
-        "One God Creed": {
-          "There is one God who has spoken to no one": {}
-        }
-      },
-      "Attributes": {
-        "God is one": {},
-        "God is the Creator": {},
-        "God is outside the Cosmos, in Heaven": {},
-        "God is not presently seen by humankind": {},
-        "God has spoken to no one": {},
-        "God does not hear our prayers": {},
-        "God does not know all things": {},
-        "God's name is unknown to humankind": {},
-        "God's character is unknown to humankind": {}
-      }
-    },
-    "Wisdom": {
-      "Proverbs": {
-        "How much better to get wisdom than gold, to get insight rather than silver!": {},
-        "Where there is strife, there is pride, but wisdom is found in those who take advice": {},
-        "Even fools are thought wise if they keep silent": {},
-        "For the living know that they will die, but the dead know nothing; they have no further reward, and even their name is forgotten": {},
-        "Whatever your hand finds to do, do it with all your might, for in the realm of the dead, where you are going, there is neither working nor planning nor knowledge nor wisdom": {},
-        "As iron sharpens iron, so one person sharpens another": {},
-        "A gentle answer turns away wrath, but a harsh word stirs up anger.": {},
-        "One who has unreliable friends soon comes to ruin, but there is a friend who sticks closer than a brother": {},
-        "Walk with the wise and become wise, for a companion of fools suffers harm": {},
-        "A generous person will prosper; whoever refreshes others will be refreshed": {},
-        "By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest.": {}
-      }
-    },
-    "Ethics": {
-      "Cardinal Virtues": {
-        "There are four cardinal virtues:": {
-          "Prudence": {
-            "Wisdom in material matters": {},
-            "Zh\u00ec (\u667a, wisdom, knowledge)": {}
-          },
-          "Justice": {
-            "righteousness": {},
-            "Y\u00ec (\u4e49; \u7fa9, righteousness, justice)": {},
-            "L\u01d0 (\u793c; \u79ae, propriety, rites)": {}
-          },
-          "Fortitude": {
-            "forbearance": {},
-            "strength": {},
-            "endurance, and": {},
-            "the ability to confront": {
-              "fear": {},
-              "uncertainty, and": {},
-              "intimidation": {}
-            }
-          },
-          "Temperance": {
-            "or restraint": {},
-            "the practice of": {
-              "self-control": {},
-              "abstention": {},
-              "discretion, and": {},
-              "moderation": {}
-            }
-          }
-        },
-        "And a few eastern additions:": {
-          "Benevolence": {
-            "R\u00e9n (\u4ec1, benevolence, humaneness)": {}
-          },
-          "X\u00ecn (\u4fe1, sincerity, faithfulness)": {}
-        }
-      },
-      "PLUR": {
-        "Peace": {},
-        "Love": {},
-        "Unity": {},
-        "Respect": {}
-      },
-      "Sexual Prohibitions": {
-        "Do not sleep with your biological": {
-          "Ancestor, nor": {},
-          "Descendant, nor": {},
-          "Sibling, nor": {},
-          "Ancestor's Sibling,": {}
-        },
-        "Nor any beast.": {}
-      },
-      "The Ten Commandments": {
-        "Remember the sabbath day, to keep it holy": {},
-        "Honor thy father and thy mother": {},
-        "Do not hold any god above the Creator": {},
-        "Do not make idols": {},
-        "Do not disrespect the Creator": {},
-        "Do not murder": {},
-        "Do not commit adultery": {},
-        "Do not steal": {},
-        "Do not lie about your peer": {},
-        "Do not covet your peer's": {
-          "house, nor": {},
-          "spouse, nor": {},
-          "anything belonging to your peer": {}
-        }
-      },
-      "The Third Covenant": {
-        "Treat others as you would have them treat you": {}
-      }
-    },
     "Ritual": {
       "Blessings": {
         "The Lord bless you and keep you;The Lord make His face shine upon you,": {},
@@ -516,6 +341,181 @@
             "Rest your forehead on the mat and": {}
           }
         }
+      }
+    },
+    "Wisdom": {
+      "Proverbs": {
+        "How much better to get wisdom than gold, to get insight rather than silver!": {},
+        "Where there is strife, there is pride, but wisdom is found in those who take advice": {},
+        "Even fools are thought wise if they keep silent": {},
+        "For the living know that they will die, but the dead know nothing; they have no further reward, and even their name is forgotten": {},
+        "Whatever your hand finds to do, do it with all your might, for in the realm of the dead, where you are going, there is neither working nor planning nor knowledge nor wisdom": {},
+        "As iron sharpens iron, so one person sharpens another": {},
+        "A gentle answer turns away wrath, but a harsh word stirs up anger.": {},
+        "One who has unreliable friends soon comes to ruin, but there is a friend who sticks closer than a brother": {},
+        "Walk with the wise and become wise, for a companion of fools suffers harm": {},
+        "A generous person will prosper; whoever refreshes others will be refreshed": {},
+        "By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest.": {}
+      }
+    },
+    "Ethics": {
+      "Cardinal Virtues": {
+        "There are four cardinal virtues:": {
+          "Prudence": {
+            "Wisdom in material matters": {},
+            "Zh\u00ec (\u667a, wisdom, knowledge)": {}
+          },
+          "Justice": {
+            "righteousness": {},
+            "Y\u00ec (\u4e49; \u7fa9, righteousness, justice)": {},
+            "L\u01d0 (\u793c; \u79ae, propriety, rites)": {}
+          },
+          "Fortitude": {
+            "forbearance": {},
+            "strength": {},
+            "endurance, and": {},
+            "the ability to confront": {
+              "fear": {},
+              "uncertainty, and": {},
+              "intimidation": {}
+            }
+          },
+          "Temperance": {
+            "or restraint": {},
+            "the practice of": {
+              "self-control": {},
+              "abstention": {},
+              "discretion, and": {},
+              "moderation": {}
+            }
+          }
+        },
+        "And a few eastern additions:": {
+          "Benevolence": {
+            "R\u00e9n (\u4ec1, benevolence, humaneness)": {}
+          },
+          "X\u00ecn (\u4fe1, sincerity, faithfulness)": {}
+        }
+      },
+      "PLUR": {
+        "Peace": {},
+        "Love": {},
+        "Unity": {},
+        "Respect": {}
+      },
+      "Sexual Prohibitions": {
+        "Do not sleep with your biological": {
+          "Ancestor, nor": {},
+          "Descendant, nor": {},
+          "Sibling, nor": {},
+          "Ancestor's Sibling,": {}
+        },
+        "Nor any beast.": {}
+      },
+      "The Ten Commandments": {
+        "Remember the sabbath day, to keep it holy": {},
+        "Honor thy father and thy mother": {},
+        "Do not hold any god above the Creator": {},
+        "Do not make idols": {},
+        "Do not disrespect the Creator": {},
+        "Do not murder": {},
+        "Do not commit adultery": {},
+        "Do not steal": {},
+        "Do not lie about your peer": {},
+        "Do not covet your peer's": {
+          "house, nor": {},
+          "spouse, nor": {},
+          "anything belonging to your peer": {}
+        }
+      },
+      "The Third Covenant": {
+        "Treat others as you would have them treat you": {}
+      }
+    },
+    "God": {
+      "Catechism": {
+        "Introduction": {
+          "The Deist Catechism is an accessible summary of Deist thought": {},
+          "It serves children and adults, instructing them in what is right, and insulating them from what is wrong": {},
+          "The Deist Catechism exists to edify the intellect, inspire ethical living, and cultivate a sense of awe and wonder towards the universe.": {}
+        },
+        "Catechism": {
+          "What is the chief end of humankind?<br>": {},
+          "The chief end of humankind is to find God<br>": {},
+          "Hasn't God been found already in the form of Yahweh, Jesus, and Allah?<br>": {},
+          "No, as these are false Gods": {},
+          "No one has ever heard, nor seen them<br>": {},
+          "Where is God?<br>": {},
+          "God is outside of this universe<br>": {},
+          "Can you see God?<br>": {},
+          "Not at this time<br>": {},
+          "Does God hear our prayers?<br>": {},
+          "No. God does not hear us<br>": {},
+          "Should you glorify God?<br>": {},
+          "Sure, if you would like<br>": {},
+          "Who were our first parents?<br>": {},
+          "Chromosomal Adam and Eve, from Africa<br>": {},
+          "Of what were our first parents made?<br>": {},
+          "They were the continuation of an earlier, similar species<br>": {},
+          "What is a covenant?<br>": {},
+          "An agreement between two or more persons.<br>": {},
+          "How many Gods are there?<br>": {},
+          "One. The Creator God<br>": {},
+          "Does God know all things?<br>": {},
+          "No<br>": {},
+          "Who wrote the Bible?<br>": {},
+          "Ordinary people<br>": {},
+          "Should I live my life according to the first two testaments?<br>": {},
+          "No, as they are legacy. A better life doctrine is the Third Testament, which has superseded the first two<br>": {},
+          "What is the purpose of religion?<br>": {},
+          "The purpose of religion is to empower the people socially<br>": {},
+          "Am I not then equally served by attending a traditional house of worship?<br>": {},
+          "If you appreciate traditional doctrine, this is the better path for you<br>": {},
+          "What is the Beatific Vision?<br>": {},
+          "The Beatific Vision will occur when humankind unequivocally witnesses the face of God<br>": {},
+          "How will we know this event has occurred?<br>": {},
+          "You will investigate the claims scientifically<br>": {},
+          "What is the Ascension?<br>": {},
+          "The Ascension is the period after the Beatific Vision in which we become communicant with God<br>": {}
+        }
+      },
+      "Central Topology": {
+        "God is outside of the Cosmos, in Heaven": {},
+        "The Cosmos, as God's creation, are also contained within Heaven": {},
+        "The Children of Abraham presently occupy only a small part of the Cosmos": {},
+        "Cosmological Topology": {
+          "Heaven": {
+            "God": {},
+            "The Cosmos": {
+              "Us": {}
+            }
+          }
+        }
+      },
+      "Faith": {
+        "Nobody Creed": {
+          "Nobody has spoken to God": {},
+          "Nobody may speak for God": {},
+          "Nobody knows the name of God": {},
+          "Nobody knows the character of God": {},
+          "No messenger exists for God": {},
+          "No human can claim genetic lineage from God": {},
+          "No human can claim spiritual lineage from God": {}
+        },
+        "One God Creed": {
+          "There is one God who has spoken to no one": {}
+        }
+      },
+      "Attributes": {
+        "God is one": {},
+        "God is the Creator": {},
+        "God is outside the Cosmos, in Heaven": {},
+        "God is not presently seen by humankind": {},
+        "God has spoken to no one": {},
+        "God does not hear our prayers": {},
+        "God does not know all things": {},
+        "God's name is unknown to humankind": {},
+        "God's character is unknown to humankind": {}
       }
     },
     "Prophesy": {

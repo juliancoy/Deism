@@ -59,3 +59,51 @@ Dena, inspired by the Roman Denarius, aims to provide a stable economic symbol e
 For questions, discussions, or further information, please reach out through [our community forum](https://deism.church/community) (**TODO**) or directly via the contact information provided on our website.
 
 We encourage all contributors to adhere to our [Code of Conduct](https://deism.church/codeofconduct) (**TODO**) to maintain a respectful and inclusive environment.
+
+## Local Docker hosting and portal testing
+
+Run `python scripts/run-local.py` from this checkout (or
+`python Deism/scripts/run-local.py` from the organization workspace). This adds
+Deism to the existing `bmoremedtech` Docker network, hosting the generated site
+at `http://localhost:8878/` and the branded OrgPortal at
+`http://localhost:8878/community`. The site's Community link opens the local
+portal on the same origin. Every launch exports the current source with the existing
+Python 3.13 and Graphviz runtime into the mounted directory; no image rebuild is required. Configure `DEISM_DOCKER_NETWORK`, `DEISM_SITE_PORT`, and
+`DEISM_PORTAL_PORT` to override the defaults.
+
+The `deism-*` services have separate persistent database volumes and local
+credentials. Organization replication is explicitly disabled for this writable
+browser fixture; the MedTech replica continues to operate separately. The
+launcher applies OrgPortal migrations and sets only the isolated Deism tenant's
+local URLs. It also seeds a local community event. State lives under `.local/`.
+This launcher does not provision or change production hosting.
+
+For headless click-through validation, run:
+
+```bash
+node ../OrgPortal/web/scripts/test-local-deism.mjs
+```
+
+The test uses a fresh local PIdP account and local verification-mail logs, checks
+website-to-portal navigation, Deism branding, events, email login, session
+persistence, and mobile layouts. Screenshots and the results report are saved to
+`../OrgPortal/web/.local/deism-clickthrough/`. Authentication and application
+requests are restricted to localhost.
+
+To refresh the mounted website without rebuilding images or restarting services,
+run `python scripts/build-local.py`. This runs the existing exporter runtime and
+writes files directly into the mounted `build/` directory. Provision the runtime
+once with `docker build -t deism-local-builder -f scripts/Dockerfile.build scripts`
+if it is missing. The current UI
+includes the church landing page, searchable doctrine reader, and the Hadith
+curriculum. The browser test verifies these features and the local portal login.
+
+For focused reader validation (contents, chapter navigation, search, diagrams,
+and responsive layouts), run `node scripts/test-reader.mjs`. It uses the
+Playwright installation in the adjacent OrgPortal workspace.
+
+The local landing page, doctrine, Hadith, community, APIs, and sign-in share
+`http://localhost:8878`. Community lives at `/community`; member pages keep their
+existing paths (such as `/chat`, `/calendar`, and `/users/login`). The former
+HTTPS gateway redirects to this combined site. Nginx serves the mounted static
+files and forwards portal requests to the existing shared services.

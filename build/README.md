@@ -180,169 +180,6 @@ The Standard Dualism
 
 
 
-## God
-
-
-### Catechism
-
-
-#### Introduction
-
-<sup>0</sup> The Deist Catechism is an accessible summary of Deist thought. <sup>1</sup> It serves children and adults, instructing them in what is right, and insulating them from what is wrong. <sup>2</sup> The Deist Catechism exists to edify the intellect, inspire ethical living, and cultivate a sense of awe and wonder towards the universe.
-
-
-#### Catechism
-
-<sup>0</sup> What is the chief end of humankind?<br><sup>1</sup> The chief end of humankind is to find God<br><sup>2</sup> Hasn't God been found already in the form of Yahweh, Jesus, and Allah?<br><sup>3</sup> No, as these are false Gods. <sup>4</sup> No one has ever heard, nor seen them<br><sup>5</sup> Where is God?<br><sup>6</sup> God is outside of this universe<br><sup>7</sup> Can you see God?<br><sup>8</sup> Not at this time<br><sup>9</sup> Does God hear our prayers?<br><sup>10</sup> No. God does not hear us<br><sup>11</sup> Should you glorify God?<br><sup>12</sup> Sure, if you would like<br><sup>13</sup> Who were our first parents?<br><sup>14</sup> Chromosomal Adam and Eve, from Africa<br><sup>15</sup> Of what were our first parents made?<br><sup>16</sup> They were the continuation of an earlier, similar species<br><sup>17</sup> What is a covenant?<br><sup>18</sup> An agreement between two or more persons.<br><sup>19</sup> How many Gods are there?<br><sup>20</sup> One. The Creator God<br><sup>21</sup> Does God know all things?<br><sup>22</sup> No<br><sup>23</sup> Who wrote the Bible?<br><sup>24</sup> Ordinary people<br><sup>25</sup> Should I live my life according to the first two testaments?<br><sup>26</sup> No, as they are legacy. A better life doctrine is the Third Testament, which has superseded the first two<br><sup>27</sup> What is the purpose of religion?<br><sup>28</sup> The purpose of religion is to empower the people socially<br><sup>29</sup> Am I not then equally served by attending a traditional house of worship?<br><sup>30</sup> If you appreciate traditional doctrine, this is the better path for you<br><sup>31</sup> What is the Beatific Vision?<br><sup>32</sup> The Beatific Vision will occur when humankind unequivocally witnesses the face of God<br><sup>33</sup> How will we know this event has occurred?<br><sup>34</sup> You will investigate the claims scientifically<br><sup>35</sup> What is the Ascension?<br><sup>36</sup> The Ascension is the period after the Beatific Vision in which we become communicant with God<br>
-
-
-
-
-### Central Topology
-
-<sup>0</sup> God is outside of the Cosmos, in Heaven. <sup>1</sup> The Cosmos, as God's creation, are also contained within Heaven. <sup>2</sup> The Children of Abraham presently occupy only a small part of the Cosmos. 
-Cosmological Topology
-
-![Cosmological Topology](../../../graphs/Cosmological_Topology.svg?raw=true)
-
-
-
-
-### Faith
-
-
-#### Nobody Creed
-
-<sup>0</sup> Nobody has spoken to God. <sup>1</sup> Nobody may speak for God. <sup>2</sup> Nobody knows the name of God. <sup>3</sup> Nobody knows the character of God. <sup>4</sup> No messenger exists for God. <sup>5</sup> No human can claim genetic lineage from God. <sup>6</sup> No human can claim spiritual lineage from God. 
-
-
-#### One God Creed
-
-<sup>0</sup> There is one God who has spoken to no one. 
-
-
-
-
-### Attributes
-
-<sup>0</sup> God is one. <sup>1</sup> God is the Creator. <sup>2</sup> God is outside the Cosmos, in Heaven. <sup>3</sup> God is not presently seen by humankind. <sup>4</sup> God has spoken to no one. <sup>5</sup> God does not hear our prayers. <sup>6</sup> God does not know all things. <sup>7</sup> God's name is unknown to humankind. <sup>8</sup> God's character is unknown to humankind. 
-
-
-
-
-## Wisdom
-
-
-### Proverbs
-
-<sup>0</sup> How much better to get wisdom than gold, to get insight rather than silver!<sup>[87](PR 16:16)</sup> . 
-
-<sup>1</sup> Where there is strife, there is pride, but wisdom is found in those who take advice<sup>[88](PR 13:10)</sup> . 
-
-<sup>2</sup> Even fools are thought wise if they keep silent<sup>[89](PR 17:28)</sup> . 
-
-<sup>3</sup> For the living know that they will die, but the dead know nothing; they have no further reward, and even their name is forgotten<sup>[90](EC 9:5)</sup> . 
-
-<sup>4</sup> Whatever your hand finds to do, do it with all your might, for in the realm of the dead, where you are going, there is neither working nor planning nor knowledge nor wisdom<sup>[91](EC 9:10)</sup> . 
-
-<sup>5</sup> As iron sharpens iron, so one person sharpens another<sup>[92](PR 27:17)</sup> . 
-
-<sup>6</sup> A gentle answer turns away wrath, but a harsh word stirs up anger.<sup>[93](PR 15:1)</sup> . 
-
-<sup>7</sup> One who has unreliable friends soon comes to ruin, but there is a friend who sticks closer than a brother<sup>[94](PR 18:24)</sup> . 
-
-<sup>8</sup> Walk with the wise and become wise, for a companion of fools suffers harm<sup>[95](PR 13:20)</sup> . 
-
-<sup>9</sup> A generous person will prosper; whoever refreshes others will be refreshed<sup>[96](PR 11:25)</sup> . 
-
-<sup>10</sup> By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest.<sup>[97](Four Books of Confucius)</sup> . 
-
-
-
-
-
-
-## Ethics
-
-
-### Cardinal Virtues
-
-<sup>0</sup> There are four cardinal virtues:
-- Prudence
-  - Wisdom in material matters
-  - Zhì (智, wisdom, knowledge)
-- Justice
-  - righteousness
-  - Yì (义; 義, righteousness, justice)
-  - Lǐ (礼; 禮, propriety, rites)
-- Fortitude
-  - forbearance
-  - strength
-  - endurance, and
-  - the ability to confront
-    - fear
-    - uncertainty, and
-    - intimidation
-- Temperance
-  - or restraint
-  - the practice of
-    - self-control
-    - abstention
-    - discretion, and
-    - moderation
-
-
-<sup>1</sup> And a few eastern additions:
-- Benevolence
-  - Rén (仁, benevolence, humaneness)
-- Xìn (信, sincerity, faithfulness)
-
-
-
-
-<sup>2</sup> PLUR
-- Peace
-- Love
-- Unity
-- Respect
-
-
-
-### Sexual Prohibitions
-
-<sup>0</sup> Do not sleep with your biological
-- Ancestor, nor
-- Descendant, nor
-- Sibling, nor
-- Ancestor's Sibling,
-
-
-<sup>1</sup> Nor any beast.
-
-<sup>2</sup> The Ten Commandments
-- Remember the sabbath day, to keep it holy
-- Honor thy father and thy mother
-- Do not hold any god above the Creator
-- Do not make idols
-- Do not disrespect the Creator
-- Do not murder
-- Do not commit adultery
-- Do not steal
-- Do not lie about your peer
-- Do not covet your peer's
-  - house, nor
-  - spouse, nor
-  - anything belonging to your peer
-
-
-
-### The Third Covenant
-
-<sup>0</sup> Treat others as you would have them treat you. 
-
-
-
-
 ## Ritual
 
 
@@ -488,6 +325,169 @@ Cosmological Topology
 
 
 
+
+
+
+
+## Wisdom
+
+
+### Proverbs
+
+<sup>0</sup> How much better to get wisdom than gold, to get insight rather than silver!<sup>[87](PR 16:16)</sup> . 
+
+<sup>1</sup> Where there is strife, there is pride, but wisdom is found in those who take advice<sup>[88](PR 13:10)</sup> . 
+
+<sup>2</sup> Even fools are thought wise if they keep silent<sup>[89](PR 17:28)</sup> . 
+
+<sup>3</sup> For the living know that they will die, but the dead know nothing; they have no further reward, and even their name is forgotten<sup>[90](EC 9:5)</sup> . 
+
+<sup>4</sup> Whatever your hand finds to do, do it with all your might, for in the realm of the dead, where you are going, there is neither working nor planning nor knowledge nor wisdom<sup>[91](EC 9:10)</sup> . 
+
+<sup>5</sup> As iron sharpens iron, so one person sharpens another<sup>[92](PR 27:17)</sup> . 
+
+<sup>6</sup> A gentle answer turns away wrath, but a harsh word stirs up anger.<sup>[93](PR 15:1)</sup> . 
+
+<sup>7</sup> One who has unreliable friends soon comes to ruin, but there is a friend who sticks closer than a brother<sup>[94](PR 18:24)</sup> . 
+
+<sup>8</sup> Walk with the wise and become wise, for a companion of fools suffers harm<sup>[95](PR 13:20)</sup> . 
+
+<sup>9</sup> A generous person will prosper; whoever refreshes others will be refreshed<sup>[96](PR 11:25)</sup> . 
+
+<sup>10</sup> By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest.<sup>[97](Four Books of Confucius)</sup> . 
+
+
+
+
+
+
+## Ethics
+
+
+### Cardinal Virtues
+
+<sup>0</sup> There are four cardinal virtues:
+- Prudence
+  - Wisdom in material matters
+  - Zhì (智, wisdom, knowledge)
+- Justice
+  - righteousness
+  - Yì (义; 義, righteousness, justice)
+  - Lǐ (礼; 禮, propriety, rites)
+- Fortitude
+  - forbearance
+  - strength
+  - endurance, and
+  - the ability to confront
+    - fear
+    - uncertainty, and
+    - intimidation
+- Temperance
+  - or restraint
+  - the practice of
+    - self-control
+    - abstention
+    - discretion, and
+    - moderation
+
+
+<sup>1</sup> And a few eastern additions:
+- Benevolence
+  - Rén (仁, benevolence, humaneness)
+- Xìn (信, sincerity, faithfulness)
+
+
+
+
+<sup>2</sup> PLUR
+- Peace
+- Love
+- Unity
+- Respect
+
+
+
+### Sexual Prohibitions
+
+<sup>0</sup> Do not sleep with your biological
+- Ancestor, nor
+- Descendant, nor
+- Sibling, nor
+- Ancestor's Sibling,
+
+
+<sup>1</sup> Nor any beast.
+
+<sup>2</sup> The Ten Commandments
+- Remember the sabbath day, to keep it holy
+- Honor thy father and thy mother
+- Do not hold any god above the Creator
+- Do not make idols
+- Do not disrespect the Creator
+- Do not murder
+- Do not commit adultery
+- Do not steal
+- Do not lie about your peer
+- Do not covet your peer's
+  - house, nor
+  - spouse, nor
+  - anything belonging to your peer
+
+
+
+### The Third Covenant
+
+<sup>0</sup> Treat others as you would have them treat you. 
+
+
+
+
+## God
+
+
+### Catechism
+
+
+#### Introduction
+
+<sup>0</sup> The Deist Catechism is an accessible summary of Deist thought. <sup>1</sup> It serves children and adults, instructing them in what is right, and insulating them from what is wrong. <sup>2</sup> The Deist Catechism exists to edify the intellect, inspire ethical living, and cultivate a sense of awe and wonder towards the universe.
+
+
+#### Catechism
+
+<sup>0</sup> What is the chief end of humankind?<br><sup>1</sup> The chief end of humankind is to find God<br><sup>2</sup> Hasn't God been found already in the form of Yahweh, Jesus, and Allah?<br><sup>3</sup> No, as these are false Gods. <sup>4</sup> No one has ever heard, nor seen them<br><sup>5</sup> Where is God?<br><sup>6</sup> God is outside of this universe<br><sup>7</sup> Can you see God?<br><sup>8</sup> Not at this time<br><sup>9</sup> Does God hear our prayers?<br><sup>10</sup> No. God does not hear us<br><sup>11</sup> Should you glorify God?<br><sup>12</sup> Sure, if you would like<br><sup>13</sup> Who were our first parents?<br><sup>14</sup> Chromosomal Adam and Eve, from Africa<br><sup>15</sup> Of what were our first parents made?<br><sup>16</sup> They were the continuation of an earlier, similar species<br><sup>17</sup> What is a covenant?<br><sup>18</sup> An agreement between two or more persons.<br><sup>19</sup> How many Gods are there?<br><sup>20</sup> One. The Creator God<br><sup>21</sup> Does God know all things?<br><sup>22</sup> No<br><sup>23</sup> Who wrote the Bible?<br><sup>24</sup> Ordinary people<br><sup>25</sup> Should I live my life according to the first two testaments?<br><sup>26</sup> No, as they are legacy. A better life doctrine is the Third Testament, which has superseded the first two<br><sup>27</sup> What is the purpose of religion?<br><sup>28</sup> The purpose of religion is to empower the people socially<br><sup>29</sup> Am I not then equally served by attending a traditional house of worship?<br><sup>30</sup> If you appreciate traditional doctrine, this is the better path for you<br><sup>31</sup> What is the Beatific Vision?<br><sup>32</sup> The Beatific Vision will occur when humankind unequivocally witnesses the face of God<br><sup>33</sup> How will we know this event has occurred?<br><sup>34</sup> You will investigate the claims scientifically<br><sup>35</sup> What is the Ascension?<br><sup>36</sup> The Ascension is the period after the Beatific Vision in which we become communicant with God<br>
+
+
+
+
+### Central Topology
+
+<sup>0</sup> God is outside of the Cosmos, in Heaven. <sup>1</sup> The Cosmos, as God's creation, are also contained within Heaven. <sup>2</sup> The Children of Abraham presently occupy only a small part of the Cosmos. 
+Cosmological Topology
+
+![Cosmological Topology](../../../graphs/Cosmological_Topology.svg?raw=true)
+
+
+
+
+### Faith
+
+
+#### Nobody Creed
+
+<sup>0</sup> Nobody has spoken to God. <sup>1</sup> Nobody may speak for God. <sup>2</sup> Nobody knows the name of God. <sup>3</sup> Nobody knows the character of God. <sup>4</sup> No messenger exists for God. <sup>5</sup> No human can claim genetic lineage from God. <sup>6</sup> No human can claim spiritual lineage from God. 
+
+
+#### One God Creed
+
+<sup>0</sup> There is one God who has spoken to no one. 
+
+
+
+
+### Attributes
+
+<sup>0</sup> God is one. <sup>1</sup> God is the Creator. <sup>2</sup> God is outside the Cosmos, in Heaven. <sup>3</sup> God is not presently seen by humankind. <sup>4</sup> God has spoken to no one. <sup>5</sup> God does not hear our prayers. <sup>6</sup> God does not know all things. <sup>7</sup> God's name is unknown to humankind. <sup>8</sup> God's character is unknown to humankind. 
 
 
 
