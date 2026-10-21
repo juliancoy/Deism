@@ -962,9 +962,9 @@ def export_static(node, index=0, value=1000.0, build_dir=None, template="SELECTE
 
 
 def ensure_clean_build():
-    if BUILD_DIR.exists():
-        shutil.rmtree(BUILD_DIR)
-    shutil.copytree(SRC_DIR, BUILD_DIR)
+    # Preserve the bind-mounted directory inode so running servers see updates.
+    BUILD_DIR.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(SRC_DIR, BUILD_DIR, dirs_exist_ok=True)
     for generated_path in (
         BUILD_DIR / "book_of_doctrine",
         BUILD_DIR / "book_of_doctrine.html",
@@ -991,7 +991,12 @@ def write_text(path, content):
 def write_landing_page():
     landing_html = (SRC_DIR / "landing.html").read_text(encoding="utf-8")
     landing_html = landing_html.replace("ASSET_VERSION", ASSET_VERSION)
+    # The combined website/portal origin exists only in the local Docker stack.
+    if os.environ.get("DEISM_LOCAL_PORTAL") != "1":
+        landing_html = landing_html.replace('<a href="/community">Community</a>', '<a href="https://orgportal.cc/portals/deism">Community</a>')
+        landing_html = landing_html.replace('      <a href="/users/login">Login</a>\n', "")
     write_text(BUILD_DIR / "index.html", landing_html)
+    write_text(BUILD_DIR / "landing.html", landing_html)
 
 
 def copy_tree(src, dest):

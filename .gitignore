@@ -119,3 +119,9 @@ deismu/google-chrome-stable_current_amd64.deb
 src/julian_flare.json
 node_modules/
 screenshots
+
+# Local Docker state and test credentials
+.local/
+
+# Wrangler deployment cache
+.wrangler/
